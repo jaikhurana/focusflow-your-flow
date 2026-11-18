@@ -1,73 +1,116 @@
-# Welcome to your Lovable project
+# FocusFlow Dashboard
 
-## Project info
+Build a modern full-stack web application called "FocusFlow".
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Purpose:
+A productivity web app for students and professionals to manage tasks, study sessions, and goals.
 
-## How can I edit this code?
+Tech Requirements:
+- React (Next.js preferred)
+- TailwindCSS for UI
+- Firebase for backend
+- Firebase Authentication (Google + Email login)
+- Firestore database
+- Firebase Hosting ready
+- Clean component architecture
 
-There are several ways of editing your application.
+Core Features:
 
-**Use Lovable**
+1. Authentication
+- Google Sign-in
+- Email/Password login
+- User profile stored in Firestore
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+2. Dashboard
+After login show a dashboard with:
+- Today's tasks
+- Upcoming deadlines
+- Study time tracker
+- Productivity stats
 
-Changes made via Lovable will be committed automatically to this repo.
+3. Task Management
+Users should be able to:
+- Create tasks
+- Set priority (High, Medium, Low)
+- Add due date
+- Mark tasks complete
+- Delete tasks
 
-**Use your preferred IDE**
+Store tasks in Firestore under each user.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+4. Study Sessions (Pomodoro)
+- 25 minute focus timer
+- Track completed sessions
+- Save sessions to Firestore
+- Show daily study time
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+5. Analytics
+Show:
+- Tasks completed this week
+- Study time graph
+- Productivity streak
 
-Follow these steps:
+6. UI Requirements
+- Clean modern UI similar to Notion / Linear
+- Responsive design
+- Sidebar navigation
+- Dashboard cards
+- Smooth animations
+
+7. Database Structure
+
+Users Collection
+- uid
+- name
+- email
+- createdAt
+
+Tasks Collection
+- userId
+- title
+- priority
+- dueDate
+- completed
+- createdAt
+
+Sessions Collection
+- userId
+- duration
+- date
+
+8. Additional
+- Dark mode toggle
+- Loading states
+- Empty states
+- Error handling
+
+9. Deployment
+Make the project ready for Firebase hosting.
+
+Provide:
+- Full folder structure
+- Setup instructions
+- Firebase config setup steps
+
+This project was built with [Lovable](https://lovable.dev).
+
+**Live app**: https://focusflow-your-flow.lovable.app
+
+## Build with Lovable
+
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/f2638c5e-962e-4637-9281-5c43c60ae766).
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+git clone <this-repository-url>
+cd <repository-name>
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
